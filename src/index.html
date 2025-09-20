@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>discord site embed maker</title>
+    <style>
+        * {
+            color: white;
+            text-align: center;
+        }
+        body {
+            background-color: black;
+        }
+        input {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>discord site embed maker (aka DSEMaker)</h1>
+    <form>
+        <label for="name">What's the name of your site?</label>
+        <br>
+        <input type="text" id="name" name="name" required />
+        <br>
+        <label for="url">What's your site URL?</label>
+        <br>
+        <input type="text" id="url" name="url" required />
+        <br>
+        <input type="submit" onclick="generateEmbed()">
+    </form>
+</body>
+</html>
