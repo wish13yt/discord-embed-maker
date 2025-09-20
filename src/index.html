@@ -17,22 +17,49 @@
         }
         textarea {
             color: black;
+            width: 300px;
         }
     </style>
 </head>
 <body>
     <h1>discord site embed maker (aka DSEMaker)</h1>
-    <form>
+    <form onsubmit="return false;">
         <label for="name">What's the name of your site?</label>
         <br>
         <input type="text" id="name" name="name" required />
         <br>
-        <label for="url">What's your site URL?</label>
+        <label for="url">What's your site URL? (include https://)</label>
         <br>
         <input type="text" id="url" name="url" required />
         <br>
+        <label for="desc">Description of your website?</label>
+        <br>
+        <input type="text" id="desc" name="desc" required />
+        <br>
         <input type="submit" onclick="generateEmbed()">
     </form>
-    <textarea readonly rows="6">Waiting for input.. If this didn't work, re-try with Console open.</textarea> 
+    <label for="textareareal">HTML for embed:</label>
+    <br>
+    <textarea name="textareareal" readonly rows="13" id="textareareal">Waiting for input.. If this didn't work, re-try with Console open.</textarea> 
+    <h1>Guide</h1>
+    <p>Put above string in your website's head section.</p>
+    <hr>
+    <footer>
+        <p>2025 Wish - Licensed under GPL-3.0.</p>
+        <br>
+        <p>Not associated with Discord or any affliates.</p>
+    </footer>
+    <script>
+        function generateEmbed() {
+            let textarea = document.getElementById("textareareal");
+            let nameInput = document.getElementById("name");
+            let nameValue = nameInput.value;
+            let descInput = document.getElementById("desc");
+            let descValue = descInput.value;
+            let urlInput = document.getElementById("url");
+            let urlValue = urlInput.value;
+            textarea.value = "<meta content='" + nameValue + "' property='og:title' />\n <meta content='" + descValue + "' property='og:description'/>\n <meta content='" + urlValue + "' property='og:url' />"
+        }
+    </script>
 </body>
 </html>
