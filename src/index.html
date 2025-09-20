@@ -19,7 +19,16 @@
             color: black;
             width: 300px;
         }
+        input:valid {
+            border: 3px solid green;
+        }
+        input:invalid {
+            border: 3px solid red;
+        }
     </style>
+    <meta content='Discord Site Embed Maker' property='og:title' />
+    <meta content='DIscord Site Embed Maker, aka DSEMaker, is a website that lets you easily make Discord HTML embeds for your website (using oGraph)' property='og:description'/>
+    <meta content='https://wish13yt.github.io/discord-embed-maker' property='og:url' />
 </head>
 <body>
     <h1>discord site embed maker (aka DSEMaker)</h1>
@@ -30,7 +39,7 @@
         <br>
         <label for="url">What's your site URL? (include https://)</label>
         <br>
-        <input type="text" id="url" name="url" required />
+        <input type="text" id="url" name="url" required/>
         <br>
         <label for="desc">Description of your website?</label>
         <br>
@@ -46,8 +55,8 @@
     <hr>
     <footer>
         <p>2025 Wish - Licensed under GPL-3.0.</p>
-        <br>
         <p>Not associated with Discord or any affliates.</p>
+        <p>I used this tool on this very website! Try it out: send the link to this website on Discord.</p>
     </footer>
     <script>
         function generateEmbed() {
